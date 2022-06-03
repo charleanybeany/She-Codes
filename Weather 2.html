@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #1a64d6;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 48px;
+        font-weight: 400;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h3 {
+        list-style: none;
+        text-align: center;
+        display: block;
+        font-size: 1.17em;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        margin: 0 auto;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      li {
+        list-style: none;
+        margin: auto;
+        width: 400px;
+      }
+      ul {
+        padding: 0;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        cursor: pointer;
+        appearance: auto;
+
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        text-align: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+      }
+      h4 {
+        text-align: center;
+        color: #475263;
+        font-size: 15px;
+        line-height: 48px;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      h5 {
+        text-align: center;
+        color: #1a64d6;
+        font-size: 24px;
+        line-height: 48px;
+        margin: 0;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h6 {
+        text-align: center;
+        color: #475263;
+        font-size: 15px;
+        line-height: 48px;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      button:hover {
+        background: white;
+        color: #1a64d6;
+        cursor: pointer;
+      }
+      li:hover {
+        background-color: #fefbef;
+      }
+      p {
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      🌥
+      <br />
+      Currently 62°F in Sandy, Utah
+    </h1>
+    <h2>
+      <strong> L:38°F / H: 23°F </strong>
+    </h2>
+    <ul>
+      <li>
+        <br />
+        <h3>🌥 Tomorrow</h3>
+        <p>
+          <strong> L:42°F / H: 68°F </strong>
+        </p>
+        <br />
+      </li>
+      <li>
+        <br />
+        <h3>☀️ Wedensday</h3>
+        <p>
+          <strong> L:44°F / H:78° </strong>
+        </p>
+        <br />
+      </li>
+      <li>
+        <br />
+        <h3>🌥 Thursday</h3>
+        <p>
+          <strong> H:54°F / H: 88°F </strong>
+        </p>
+        <br />
+      </li>
+    </ul>
+    <br />
+    <h4>Today, May 23rd, 2022</h4>
+    <button>Change city</button>
+    <h5>Coded by Charlene Smith</h5>
+    <h6>Inspired by Matt Delac</h6>
+    <script>
+      function changeCity() {
+        let city = prompt("What city do you live in?");
+        let temp = prompt("What temperature is it?");
+        let heading = document.querySelector("h1");
+        if (temp < 30) {
+          heading.innerHTML = "🥶  <br /> Currently" + temp + "°F in" + city;
+        } else {
+          heading.innerHTML = "😄  <br /> Currently" + temp + "°F in" + city;
+        }
+      }
+
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
